@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link das folhas de estilos -->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/responsive.css">
+
+    <!-- Link swiperjs - css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  
+    <title>Netflix Clone - Lucas Ferreira Nogueira</title>
+    <link rel="shortcut icon" href="./img/logoN.png">
+</head>
+<body>
+
+    <!-- Aqui será o cabeçalho da minha página, é nele que irá nosso menu de navegação (Navbar) e texto-logo -->
+    <header>
+      <div class="caixa">
+        
+        <div class="container"> <!--classe wrapper(envelopar; containerização)--> 
+            <!-- <h2 class="logo">NETFLIX</h2> -->
+            <img src="./img/netflix-logo.png" alt="logo Netflix por extenso" class="imagem-logo">
+            <nav>
+                <a href="">Inicio</a>
+                <a href="">Séries</a>
+                <a href="">Filmes</a>
+                <a href="">Bombando</a>
+                <a href="">Minha lista</a>
+            </nav>
+
+        </div>
+
+        <div class="container-itens">
+          <i class="fas fa-search"></i>
+          <i class="fas fa-bell"></i>
+          <img src="./img/perfil.png" alt="fotodoPerfil" class="meuPerfil">
+          <i class="fas fa-sort-down"></i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+        <div>
+            <div class="filme-principal" onmouseover="aoEntrar()" onmouseout="aoSair()">
+                <div class="container"> <!--classe wrapper(envelopar; containerização)--> 
+                    <h3 class="titulo">OZARK</h3>
+                    <p class="descricao">Um consultor financeiro se muda com a família para as montanhas do Missouri com o objetivo de lavar quinhentos milhões de dólares e acalmar um violento traficante.</p>
+                    <div class="botoes">
+                       <button role="button" class="botao"><i class="fas fa-play"></i> Assistir</button>
+                       <button role="button" class="botao"><i class="fas fa-info-circle"></i> Mais informações</button>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="swiper mySwiper carrosel1">
+        <h2 class="titulo-carrosel">Lançados nos últimos 12 meses</h2>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/arquivo81.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/arcane.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/castlevania.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/dota.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/fiqueCOmigo.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/jojos.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/missa.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/munique.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/naoOLhe.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/ohomemdasCastanhas.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/ozarkPoster.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/record.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/riverdale.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/seven.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/theWitcher.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/tratamento.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/bakiHanma.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/cobra.jpg" alt=""></div>
+        </div>
+
+        <div class="swiper-button-next proximo"></div>
+        <div class="swiper-button-prev proximo"></div>
+      </div>
+
+      <div class="swiper mySwiper carrosel2">
+        <h2 class="titulo-carrosel">Em alta</h2>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/ano.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/brincando.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/desencanto.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/emily.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/ilha.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/inimiga.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/instinto.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/killer.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/maturidade.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/mirror.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/naruto.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/rua.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/sinner.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/suits.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/temporada.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/titans.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/tranquilidade.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/final.jpg" alt=""></div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+
+
+    <!-- scripts do fontawesome -->
+    <script src="https://kit.fontawesome.com/29d74d1b52.js" crossorigin="anonymous">  
+    </script>
+
+    <!-- Script meu -->
+    <!-- <script src="js/setUp.js"></script> -->
+    
+    <!-- Script do Swiper bundle -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 6,
+          spaceBetween: 7,
+          slidesPerGroup: 3,
+          loop: true,
+          loopFillGroupWithBlank: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+    </script>
+
+</body>
+</html>

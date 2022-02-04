@@ -1,0 +1,200 @@
+/* 1.Elementos base  */
+
+/* Criando variáveis para trabalhar as cores como variáveis, assim ao realizarmos uma mudanças no valor dessas vaiáveis, as alterações irão ocorrer em todos os lugares aonde ela foi colocada, deixando nosso css mais funcional; */
+
+:root{
+    --vermelho:rgb(178, 6, 16);
+    --preto:#141414;
+}
+
+/* Zeramos nosso documento tirando as margens e paddings automáticos do browser e já colocando o box-sizing para todos os elementos filhos respeitarem o tamanho de seus elementos pais no documento inteiro */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Aqui no body fizemos o primeiro uso das cores como variáveis e colocamos nossa fonte padrão para tod documento */
+
+body{
+    background: var(--preto);
+    /* background-color: var(--preto); */
+
+    font-family: 'Arial', Times, serif;
+
+    color: white;
+}
+
+/*2. navBAr */
+
+/* Selecionando item a item, fazendo referência a árvore, a hierarquia de elementos pais e filhos, selecionei a classe container que irá adicionar estilo a nossa navbar */
+
+header div.caixa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header div.container{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+/* Alinha os itens dentro do container cada um em uma extremidade (graças ao flex box) a ideia é retira-lo para deixar os itens parecidos ao NETFLIX original */
+
+    margin: 10px 0px 10px 40px;
+    font-size: 13px;
+}
+
+header div.container-itens{
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 40px;
+}
+
+header div img.imagem-logo{
+    width: 120px;
+    padding: 15px 15px 15px 0;
+    margin-right: 15px;
+}
+
+header div img.meuPerfil{
+    width: 35px;
+    border-radius: 7%;
+}
+
+
+
+header div nav a{
+    text-decoration: none;
+    color: #FFFFFF;
+    margin-right: 10px;
+}
+
+
+/* O que dá o efeito de mudança de cor, ou tonalidade dos links da navbar */
+header div nav a:hover{
+    color: #C0C2C3;
+}
+
+i {
+    margin: 10px;
+}
+
+/* 3. Série Principal */
+/* layout do filme ou série em destaque */
+
+main div.filme-principal{
+    font-size: 16px;
+
+    background-image: linear-gradient(rgba(0,0,0,.10),rgba(0,0,0.10)), url("../img/ozark.jpg");
+    background-size: cover;
+    height: 550px;
+
+    display: flex;
+    flex-direction: column;
+    /* Sempre segui a direção do flex-direction */
+    justify-content: center;
+}
+
+.filme-principal .descricao{
+    margin-bottom: 5%;
+    margin-top: 1%;
+    width: 100%;
+}
+
+.botoes{
+    margin-bottom: 20%;
+
+}
+
+.filme-principal .titulo{
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container{
+    margin: 0px 0 0 40px;
+}
+
+.filme-principal .container{
+    width: 35%;
+}
+
+/* Aqui estou configurando apenas os botões */
+.botao{
+/* Define o aspecto de cor dos botões, sendo o rgba para dar efeito de transparência e peguei as proporções do próprio botão do NetFlix */
+    background-color: rgba(109,109,110,0.7);
+    border: none;
+    border-radius: 4px;
+    color: white;
+/* Define as proporções e aspectos de tamaho do botão */
+    padding: 2px 15px;
+    margin-right: 8px;
+    font-size: 15px;
+/* Muda o cursor ao passar ele pelo botão, indicando ser um botão de ação */
+    cursor: pointer;
+
+    transition: .1s ease all;
+}
+
+/* Efeito ao passar o cursor pelo botão */
+.botao:hover{
+    background-color: white;
+    color: var(--preto);
+}
+
+.botao i{
+    margin-right: 5px;
+}
+
+/* 4. Carrosel */
+
+/* Aqui está localizado as alterações swiper */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carrosel1{
+    margin-top: -80px;
+}
+
+.titulo-carrosel{
+    margin: 0 0 20px 40px;
+}
+
+.carrosel2{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
